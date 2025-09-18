@@ -2,6 +2,10 @@
 
 A modern, AI-powered expense tracking application built with Next.js, featuring intelligent categorization, insights, and comprehensive expense management capabilities.
 
+<img width="1098" height="897" alt="project4" src="https://github.com/user-attachments/assets/9b91da94-c440-4bcd-b519-0899648b2ea1" />
+<img width="1092" height="680" alt="project4_a" src="https://github.com/user-attachments/assets/39cfb7c3-1a24-4040-85b4-f4e71c603911" />
+
+
 ## 🚀 Features
 
 - **AI-Powered Insights**: Get intelligent analysis of your spending patterns
