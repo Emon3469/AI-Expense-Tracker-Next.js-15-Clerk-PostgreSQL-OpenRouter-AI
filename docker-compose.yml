@@ -4,7 +4,7 @@ services:
   # PostgreSQL Database
   postgres:
     image: postgres:15-alpine
-    container_name: ai-project-postgres
+    container_name: ai-expense-tracker-postgres
     restart: unless-stopped
     environment:
       POSTGRES_DB: neondb
@@ -15,14 +15,14 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
-      - ai-project-network
+      - ai-expense-tracker-network
 
   # Next.js Application
   app:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: ai-project-app
+    container_name: ai-expense-tracker-app
     restart: unless-stopped
     ports:
       - "3000:3000"
@@ -40,7 +40,7 @@ services:
     depends_on:
       - postgres
     networks:
-      - ai-project-network
+      - ai-expense-tracker-network
     # Run database migrations before starting the app
     command: >
       sh -c "npx prisma migrate deploy &&
@@ -52,13 +52,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: ai-project-migrate
+    container_name: ai-expense-tracker-migrate
     environment:
       - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/neondb?sslmode=disable
     depends_on:
       - postgres
     networks:
-      - ai-project-network
+      - ai-expense-tracker-network
     command: >
       sh -c "npx prisma migrate deploy &&
              npx prisma generate"
@@ -69,5 +69,5 @@ volumes:
     driver: local
 
 networks:
-  ai-project-network:
+  ai-expense-tracker-network:
     driver: bridge

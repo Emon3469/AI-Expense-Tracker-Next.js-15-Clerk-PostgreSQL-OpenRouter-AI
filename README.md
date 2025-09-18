@@ -38,7 +38,7 @@ Before running this application, make sure you have the following installed:
 1. **Clone the repository**
    ```bash
    git clone <your-repository-url>
-   cd ai-project
+   cd ai-expense-tracker-v2
    ```
 
 2. **Set up environment variables**
@@ -109,7 +109,7 @@ If you prefer to run the application locally without Docker:
 ## 📁 Project Structure
 
 ```
-ai-project/
+ai-expense-tracker-v2/
 ├── app/                    # Next.js app directory
 │   ├── actions/           # Server actions
 │   ├── about/             # About page
@@ -242,7 +242,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you encounter any issues or have questions:
 
-1. Check the [Issues](https://github.com/your-username/ai-project/issues) page
+1. Check the [Issues](https://github.com/your-username/ai-expense-tracker-v2/issues) page
 2. Create a new issue if your problem isn't already reported
 3. Provide detailed information about your environment and the issue
 
